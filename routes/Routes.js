@@ -13,6 +13,8 @@ app.use(
   })
 );
 
+console.log('slsls');
+
 // get all todo items in the db
 app.get('/', (req, res) => {
   repository.findAll().then((todos) => {
