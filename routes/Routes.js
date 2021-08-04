@@ -5,6 +5,8 @@ const repository = require('../respositories/TodoRepository');
 
 const cors = require("cors");
 
+const app1 = express()
+
 // app.use(
 //   cors({
 //     origin: "*", //アクセス許可するオリジン
@@ -15,9 +17,9 @@ const cors = require("cors");
 
 app.use(cors());
 
-app.use(function(req, res, next) {
+app1.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
